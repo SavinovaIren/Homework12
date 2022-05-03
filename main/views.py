@@ -21,5 +21,5 @@ def search_page():
         posts = load_json('posts.json')
     except DataJsonError:
         return 'Проблемы с открытием файла'
-    search_post_by_string(posts, s)
-    return render_template("post_list.html", posts=posts, s=s)
+    path = search_post_by_string(posts, s)
+    return render_template("post_list.html", posts=path, s=s)
