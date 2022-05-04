@@ -32,6 +32,6 @@ def add_new_page():
 
     posts.append(new_post)
     with open('posts.json', "w", encoding="UTF-8") as file:
-        json.dumps(posts, file, ensure_ascii=False)
+        json.dump(posts, file, ensure_ascii=False)
 
     return render_template("post_uploaded.html", new_post=new_post)
